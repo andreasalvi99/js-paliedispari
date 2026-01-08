@@ -15,6 +15,15 @@ console.log("userChoice:", userChoice);
 const userNumber = parseInt(prompt("Scegli un numero tra 1 e 5..."));
 console.log("userNumber:", userNumber);
 
+// !! Error control
+
+if (isNaN(userNumber)) {
+    throw new Error ("Non sono ammesse lettere")
+}
+
+else if (userNumber > 5 || userNumber < 1 ) {
+    throw new Error ("Il valore deve essere compreso fra 1 e 5")
+}
 // ? Genero numero random con una funzione
 
 function generateRandomNumber(min, max) {
