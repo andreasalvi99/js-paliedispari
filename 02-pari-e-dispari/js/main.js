@@ -43,9 +43,17 @@ if (isNaN(userNumber)) {
   throw new Error("Il valore deve essere compreso fra 1 e 5");
 }
 
+// !! Fine error control
+
 // TODO Scrivo le funzioni
 // ? Genero numero random con una funzione
 
+/**
+ * This function generates a random number from a fixed min and a fixed max previously established.
+ * @param {number} min this is minimum value
+ * @param {number} max this is the maximum value
+ * @returns  {number} this is the randomic number that is generated
+ */
 function generateRandomNumber(min, max) {
   // ? Conviene mettere min e max come parametri
   const randomNum = Math.floor(Math.random() * (max - min + 1) + min);
@@ -66,6 +74,8 @@ function isSumNumberOdd(number) {
   return isSumOdd;
 }
 // TODO Fine elenco funzioni
+
+// ? Stabilisco il vincitore
 
 const outputMessageWin = "Complimenti!! hai vinto";
 const outputMessageLose = "Peccato, hai perso";
