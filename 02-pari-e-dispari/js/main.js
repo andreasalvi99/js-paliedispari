@@ -15,8 +15,20 @@ console.log("userChoice:", userChoice);
 const userNumber = parseInt(prompt("Scegli un numero tra 1 e 5..."));
 console.log("userNumber:", userNumber);
 
+// ? Invoco la funzione del numero random
+
 const randomNum = generateRandomNumber(1, 5);
 console.log("randomNum:", randomNum);
+
+// // ? Invoco la funzione
+
+// const odd = isNumberOdd(userNumber);
+// console.log("isNumberOdd:", isNumberOdd(userNumber));
+
+// ? Invoco la funzione della scelta pari o dispari
+
+const odd = isUserChoiceOdd(userChoice);
+console.log("isUserChoiceOdd:", isUserChoiceOdd(userChoice));
 
 // !! Error control
 
@@ -33,15 +45,16 @@ function generateRandomNumber(min, max) {
   return randomNum;
 }
 
-// ? Genero una funzione per definire se il numero scelto dell'utente è dispari
+// // ? Genero una funzione per definire se il numero scelto dell'utente è dispari
 
-function isNumberOdd(number) {
-  const even = number % 2 !== 0;
-  return even;
-}
+// function isNumberOdd(number) {
+//   const odd = number % 2 !== 0;
+//   return odd;
+// }
 
 // ? Genero funzione per definire se la scelta dell'utente è dispari
 
-// function isUserChoiceOdd(choice = "dispari") {
-//     const isChoiceOdd =
-// }
+function isUserChoiceOdd(choice = "dispari") {
+  const odd = choice === "dispari";
+  return odd;
+}
