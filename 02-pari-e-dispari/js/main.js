@@ -15,20 +15,21 @@ console.log("userChoice:", userChoice);
 const userNumber = parseInt(prompt("Scegli un numero tra 1 e 5..."));
 console.log("userNumber:", userNumber);
 
+const randomNum = generateRandomNumber(1, 5);
+console.log("randomNum:", randomNum);
+
 // !! Error control
 
 if (isNaN(userNumber)) {
-    throw new Error ("Non sono ammesse lettere")
-}
-
-else if (userNumber > 5 || userNumber < 1 ) {
-    throw new Error ("Il valore deve essere compreso fra 1 e 5")
+  throw new Error("Non sono ammesse lettere");
+} else if (userNumber > 5 || userNumber < 1) {
+  throw new Error("Il valore deve essere compreso fra 1 e 5");
 }
 // ? Genero numero random con una funzione
 
 function generateRandomNumber(min, max) {
   // ? Conviene mettere min e max come parametri
-  const randomNum = Math.floor(Math.randonm() * (max - min + 1) + min);
+  const randomNum = Math.floor(Math.random() * (max - min + 1) + min);
   return randomNum;
 }
 
@@ -41,6 +42,6 @@ function isNumberOdd(number) {
 
 // ? Genero funzione per definire se la scelta dell'utente è dispari
 
-function isUserChoiceOdd(choice = "dispari") {
-    const isChoiceOdd = 
-}
+// function isUserChoiceOdd(choice = "dispari") {
+//     const isChoiceOdd =
+// }
