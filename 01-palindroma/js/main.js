@@ -26,3 +26,22 @@ function reverseWord(word) {
 }
 
 console.log("reverseWord:", reverseWord(userWord));
+
+// ? Se la reverseWord è uguale a userWord allora la parola è palindroma
+
+const outputMessage1 = "La parola inserita è palindroma";
+
+const outputMessage2 = "La parola inserita non è palindroma";
+
+if (reverseWord === userWord) {
+  console.log(reverseWord === userWord);
+
+  alert(outputMessage1);
+
+  // ? Altrimenti..
+} else {
+  console.log(reverseWord === userWord);
+  alert(outputMessage2);
+}
+
+console.log(outputMessage2);
