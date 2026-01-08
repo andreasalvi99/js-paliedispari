@@ -19,11 +19,13 @@ function reverseWord(word) {
     const currentLetter = word[i];
     console.log(currentLetter);
 
-    reversedWord = currentLetter + reversedWord;
+    reversedWord = word[i] + reversedWord;
   }
 
   return reversedWord;
 }
+
+const reversedWord = reverseWord(userWord);
 
 console.log("reverseWord:", reverseWord(userWord));
 
@@ -33,15 +35,15 @@ const outputMessage1 = "La parola inserita è palindroma";
 
 const outputMessage2 = "La parola inserita non è palindroma";
 
-if (reverseWord === userWord) {
-  console.log(reverseWord === userWord);
+if (reversedWord === userWord) {
+  console.log(reversedWord === userWord);
 
   alert(outputMessage1);
+  console.log(outputMessage1);
 
   // ? Altrimenti..
 } else {
-  console.log(reverseWord === userWord);
+  console.log(reversedWord === userWord);
   alert(outputMessage2);
+  console.log(outputMessage2);
 }
-
-console.log(outputMessage2);
