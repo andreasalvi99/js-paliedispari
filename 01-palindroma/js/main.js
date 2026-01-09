@@ -19,7 +19,7 @@ function reverseWord(word) {
     const currentLetter = word[i];
     console.log(currentLetter);
 
-    reversedWord = word[i] + reversedWord;
+    reversedWord = currentLetter + reversedWord;
   }
 
   return reversedWord;
